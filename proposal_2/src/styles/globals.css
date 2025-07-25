@@ -1,0 +1,352 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Mobile-first font sizes */
+  --font-size: 16px; /* Increased base font size for mobile readability */
+  
+  /* Miranda Arquitectura Color Palette */
+  --miranda-orange-dark: #EA8B2E;
+  --miranda-orange-light: #F4AC45;
+  --miranda-gray-dark: #4D4D4D;
+  --miranda-gray-light: #EAEAEA;
+  --miranda-white: #FFFFFF;
+  
+  /* System Colors based on Miranda Palette */
+  --background: var(--miranda-white);
+  --foreground: var(--miranda-gray-dark);
+  --card: var(--miranda-white);
+  --card-foreground: var(--miranda-gray-dark);
+  --popover: var(--miranda-white);
+  --popover-foreground: var(--miranda-gray-dark);
+  --primary: var(--miranda-orange-dark);
+  --primary-foreground: var(--miranda-white);
+  --secondary: var(--miranda-orange-light);
+  --secondary-foreground: var(--miranda-white);
+  --muted: var(--miranda-gray-light);
+  --muted-foreground: var(--miranda-gray-dark);
+  --accent: var(--miranda-orange-light);
+  --accent-foreground: var(--miranda-white);
+  --destructive: #dc2626;
+  --destructive-foreground: var(--miranda-white);
+  --border: var(--miranda-gray-light);
+  --input: transparent;
+  --input-background: #f8f9fa;
+  --switch-background: var(--miranda-gray-light);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--miranda-orange-dark);
+  --chart-1: var(--miranda-orange-dark);
+  --chart-2: var(--miranda-orange-light);
+  --chart-3: var(--miranda-gray-dark);
+  --chart-4: #22c55e;
+  --chart-5: #3b82f6;
+  --radius: 0.75rem; /* Slightly larger radius for mobile */
+  --sidebar: var(--miranda-white);
+  --sidebar-foreground: var(--miranda-gray-dark);
+  --sidebar-primary: var(--miranda-orange-dark);
+  --sidebar-primary-foreground: var(--miranda-white);
+  --sidebar-accent: var(--miranda-gray-light);
+  --sidebar-accent-foreground: var(--miranda-gray-dark);
+  --sidebar-border: var(--miranda-gray-light);
+  --sidebar-ring: var(--miranda-orange-dark);
+  
+  /* Mobile-first spacing and sizing */
+  --mobile-touch-target: 44px; /* Minimum touch target size */
+  --mobile-padding: 1rem; /* Standard mobile padding */
+  --mobile-margin: 0.75rem; /* Standard mobile margin */
+}
+
+.dark {
+  --background: var(--miranda-gray-dark);
+  --foreground: var(--miranda-white);
+  --card: var(--miranda-gray-dark);
+  --card-foreground: var(--miranda-white);
+  --popover: var(--miranda-gray-dark);
+  --popover-foreground: var(--miranda-white);
+  --primary: var(--miranda-orange-light);
+  --primary-foreground: var(--miranda-gray-dark);
+  --secondary: var(--miranda-orange-dark);
+  --secondary-foreground: var(--miranda-white);
+  --muted: #3a3a3a;
+  --muted-foreground: var(--miranda-gray-light);
+  --accent: var(--miranda-orange-light);
+  --accent-foreground: var(--miranda-gray-dark);
+  --destructive: #ef4444;
+  --destructive-foreground: var(--miranda-white);
+  --border: #3a3a3a;
+  --input: #3a3a3a;
+  --ring: var(--miranda-orange-light);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: var(--miranda-orange-light);
+  --chart-2: var(--miranda-orange-dark);
+  --chart-3: var(--miranda-gray-light);
+  --chart-4: #22c55e;
+  --chart-5: #3b82f6;
+  --sidebar: #3a3a3a;
+  --sidebar-foreground: var(--miranda-white);
+  --sidebar-primary: var(--miranda-orange-light);
+  --sidebar-primary-foreground: var(--miranda-gray-dark);
+  --sidebar-accent: #3a3a3a;
+  --sidebar-accent-foreground: var(--miranda-white);
+  --sidebar-border: #3a3a3a;
+  --sidebar-ring: var(--miranda-orange-light);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Miranda Arquitectura Custom Colors */
+  --color-miranda-orange-dark: var(--miranda-orange-dark);
+  --color-miranda-orange-light: var(--miranda-orange-light);
+  --color-miranda-gray-dark: var(--miranda-gray-dark);
+  --color-miranda-gray-light: var(--miranda-gray-light);
+  --color-miranda-white: var(--miranda-white);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Prevent horizontal scrolling on mobile */
+    overflow-x: hidden;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Disable zoom on iOS when focusing inputs */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  
+  /* Improve touch targets */
+  button, a, [role="button"] {
+    min-height: var(--mobile-touch-target);
+    min-width: var(--mobile-touch-target);
+  }
+}
+
+/**
+ * Mobile-first typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 1.75rem; /* 28px - Mobile friendly */
+      font-weight: var(--font-weight-medium);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: 1.5rem; /* 24px - Mobile friendly */
+      font-weight: var(--font-weight-medium);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem; /* 20px - Mobile friendly */
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: 1.125rem; /* 18px - Mobile friendly */
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 1rem; /* 16px - Base mobile size */
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    label {
+      font-size: 0.95rem; /* 15.2px - Slightly smaller for labels */
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    button {
+      font-size: 1rem; /* 16px - Good for touch targets */
+      font-weight: var(--font-weight-medium);
+      line-height: 1.4;
+      min-height: var(--mobile-touch-target);
+    }
+
+    input, textarea, select {
+      font-size: 1rem; /* 16px - Prevents zoom on iOS */
+      font-weight: var(--font-weight-normal);
+      line-height: 1.4;
+      min-height: var(--mobile-touch-target);
+    }
+    
+    small {
+      font-size: 0.875rem; /* 14px */
+      line-height: 1.4;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Miranda Arquitectura Utility Classes */
+@layer utilities {
+  .bg-miranda-orange-dark {
+    background-color: var(--miranda-orange-dark);
+  }
+  
+  .bg-miranda-orange-light {
+    background-color: var(--miranda-orange-light);
+  }
+  
+  .bg-miranda-gray-dark {
+    background-color: var(--miranda-gray-dark);
+  }
+  
+  .bg-miranda-gray-light {
+    background-color: var(--miranda-gray-light);
+  }
+  
+  .text-miranda-orange-dark {
+    color: var(--miranda-orange-dark);
+  }
+  
+  .text-miranda-orange-light {
+    color: var(--miranda-orange-light);
+  }
+  
+  .text-miranda-gray-dark {
+    color: var(--miranda-gray-dark);
+  }
+  
+  .text-miranda-gray-light {
+    color: var(--miranda-gray-light);
+  }
+  
+  .border-miranda-orange-dark {
+    border-color: var(--miranda-orange-dark);
+  }
+  
+  .border-miranda-orange-light {
+    border-color: var(--miranda-orange-light);
+  }
+  
+  .border-miranda-gray-light {
+    border-color: var(--miranda-gray-light);
+  }
+  
+  /* Mobile-first utilities */
+  .mobile-padding {
+    padding: var(--mobile-padding);
+  }
+  
+  .mobile-margin {
+    margin: var(--mobile-margin);
+  }
+  
+  .mobile-touch-target {
+    min-height: var(--mobile-touch-target);
+    min-width: var(--mobile-touch-target);
+  }
+  
+  /* Safe area utilities for mobile devices */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-area-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  
+  .safe-area-right {
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 480px) {
+  :root {
+    --mobile-padding: 1rem;
+    --mobile-margin: 0.5rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) {
+  :root {
+    --font-size: 15px;
+    --mobile-padding: 1.5rem;
+    --mobile-margin: 1rem;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1024px) {
+  :root {
+    --font-size: 14px;
+    --mobile-padding: 2rem;
+    --mobile-margin: 1.5rem;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowLeft, LogOut, Building2 } from 'lucide-react';
+import { ArrowLeft, LogOut } from 'lucide-react';
 import { Button } from '../ui/button';
+import { Logo } from './Logo';
 
 interface HeaderProps {
   title: string;
@@ -36,9 +37,7 @@ export const Header: React.FC<HeaderProps> = ({
           
           {/* Logo and title */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-miranda-orange-dark to-miranda-orange-light rounded-lg flex items-center justify-center shadow-sm">
-              <Building2 className="h-4 w-4 text-white" />
-            </div>
+            <Logo size="sm" />
             <div className="flex flex-col">
               <h1 className="text-lg font-semibold text-miranda-gray-dark leading-tight">{title}</h1>
               <span className="text-xs text-miranda-gray-dark/60 leading-none">Miranda Arquitectura</span>

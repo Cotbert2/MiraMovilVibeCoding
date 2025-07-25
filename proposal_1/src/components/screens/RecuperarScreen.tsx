@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Mail, Building2 } from 'lucide-react';
+import { ArrowLeft, Mail } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Toast } from '../common/Toast';
+import { Logo } from '../common/Logo';
 import { RecuperarData } from '../../types';
 import { validarEmail } from '../../utils/validations';
 
@@ -127,11 +128,8 @@ export const RecuperarScreen: React.FC<RecuperarScreenProps> = ({
           </Button>
           
           <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-miranda-orange-dark to-miranda-orange-light rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <div className="flex items-center justify-center">
-                <Building2 className="text-white text-xl" />
-                <span className="text-white text-lg font-bold ml-1">M</span>
-              </div>
+            <div className="mx-auto flex justify-center mb-4">
+              <Logo size="lg" />
             </div>
             <CardTitle className="text-xl text-miranda-gray-dark">Recuperar Contraseña</CardTitle>
             <p className="text-miranda-gray-dark/70 mt-2">

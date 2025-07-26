@@ -14,17 +14,6 @@ interface RegistrarMovimientoScreenProps {
   setPantallaActual: (pantalla: any) => void;
 }
 
-const OBRAS_DISPONIBLES = [
-  'Proyecto Norte',
-  'Proyecto Sur',
-  'Proyecto Este',
-  'Proyecto Oeste',
-  'Proyecto Centro',
-  'Obra Residencial A',
-  'Obra Comercial B',
-  'Infraestructura Vial C'
-];
-
 export const RegistrarMovimientoScreen: React.FC<RegistrarMovimientoScreenProps> = ({
   maquinaria,
   registrarMovimiento,
@@ -37,7 +26,7 @@ export const RegistrarMovimientoScreen: React.FC<RegistrarMovimientoScreenProps>
     observaciones: ''
   });
   
-  const [errors, setErrors] = useState<Partial<typeof formData>>({});
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
   const [toast, setToast] = useState<{ type: 'success' | 'error' | 'warning'; message: string } | null>(null);
 
   const validateField = (field: keyof typeof formData, value: string) => {
@@ -164,7 +153,7 @@ export const RegistrarMovimientoScreen: React.FC<RegistrarMovimientoScreenProps>
                 <Label htmlFor="maquinaria">Maquinaria</Label>
                 <Select
                   value={formData.maquinariaId}
-                  onValueChange={(value) => handleInputChange('maquinariaId', value)}
+                  onValueChange={(value: string) => handleInputChange('maquinariaId', value)}
                 >
                   <SelectTrigger className={errors.maquinariaId ? 'border-destructive' : ''}>
                     <SelectValue placeholder="Seleccione la maquinaria" />
@@ -186,7 +175,7 @@ export const RegistrarMovimientoScreen: React.FC<RegistrarMovimientoScreenProps>
                 <Label htmlFor="tipoMovimiento">Tipo de Movimiento</Label>
                 <Select
                   value={formData.tipoMovimiento}
-                  onValueChange={(value) => handleInputChange('tipoMovimiento', value)}
+                  onValueChange={(value: string) => handleInputChange('tipoMovimiento', value)}
                 >
                   <SelectTrigger className={errors.tipoMovimiento ? 'border-destructive' : ''}>
                     <SelectValue placeholder="Seleccione el tipo de movimiento" />
@@ -204,7 +193,6 @@ export const RegistrarMovimientoScreen: React.FC<RegistrarMovimientoScreenProps>
               <div className="space-y-2">
                 <Label htmlFor="obra">Obra</Label>
                    <Textarea
-                  type="text"
                   id="obra"
                   value={formData.obra}
                   onChange={(e) => handleInputChange('obra', e.target.value)}

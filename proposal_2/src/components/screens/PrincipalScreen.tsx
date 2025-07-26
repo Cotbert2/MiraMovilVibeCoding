@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Package, FileText, BarChart3, Truck, Building2, Clock, TrendingUp } from 'lucide-react';
+import { Package, FileText, BarChart3, Truck, Building2, Clock, TrendingUp } from 'lucide-react';
 import { Header } from '../common/Header';
 import { BottomNavbar } from '../common/BottomNavbar';
 import { Card, CardContent } from '../ui/card';

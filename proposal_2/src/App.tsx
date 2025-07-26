@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useAppState } from './hooks/useAppState';
 import { LoginScreen } from './components/screens/LoginScreen';
 import { RecuperarScreen } from './components/screens/RecuperarScreen';
@@ -22,14 +22,12 @@ export default function App() {
     logout,
     recuperarContraseña,
     registrarUsuario,
-    actualizarUsuario,
     eliminarUsuario,
     registrarMaquinaria,
     registrarMovimiento,
     obtenerMovimientos,
     obtenerMaquinaria,
-    obtenerUsuarios,
-    generarInforme
+    obtenerUsuarios
   } = useAppState();
 
   // Mobile-first optimizations
@@ -128,7 +126,6 @@ export default function App() {
         return (
           <ListarUsuariosScreen
             usuarios={obtenerUsuarios()}
-            actualizarUsuario={actualizarUsuario}
             eliminarUsuario={eliminarUsuario}
             setPantallaActual={setPantallaActual}
           />

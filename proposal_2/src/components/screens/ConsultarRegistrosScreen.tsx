@@ -18,7 +18,6 @@ interface ConsultarRegistrosScreenProps {
 
 export const ConsultarRegistrosScreen: React.FC<ConsultarRegistrosScreenProps> = ({
   movimientos,
-  maquinaria,
   setPantallaActual
 }) => {
   const [filtros, setFiltros] = useState<FiltrosConsulta>({
@@ -105,7 +104,7 @@ export const ConsultarRegistrosScreen: React.FC<ConsultarRegistrosScreenProps> =
                   <Label className="text-xs">Tipo de Movimiento</Label>
                   <Select
                     value={filtros.tipoMovimiento || '__all__'}
-                    onValueChange={(value) => setFiltros(prev => ({ ...prev, tipoMovimiento: value === '__all__' ? undefined : value as 'Entrada' | 'Salida' }))}
+                    onValueChange={(value: string) => setFiltros(prev => ({ ...prev, tipoMovimiento: value === '__all__' ? undefined : value as 'Entrada' | 'Salida' }))}
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Todos" />

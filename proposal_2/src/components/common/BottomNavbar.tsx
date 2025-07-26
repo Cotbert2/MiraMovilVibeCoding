@@ -1,5 +1,4 @@
 import React from 'react';
-import { User } from '../../types';
 
 interface BottomNavbarProps {
   activeTab: 'inicio' | 'maquinaria' | 'usuarios' | 'informes';

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">miramovil</string>
+    <string name="title_activity_main">miramovil</string>
+    <string name="package_name">com.miramovil.com</string>
+    <string name="custom_url_scheme">com.miramovil.com</string>
+</resources>

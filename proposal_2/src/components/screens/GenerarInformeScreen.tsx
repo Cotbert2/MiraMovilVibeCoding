@@ -200,7 +200,7 @@ export const GenerarInformeScreen: React.FC<GenerarInformeScreenProps> = ({
                 <Label className="text-xs">Obra Específica (Opcional)</Label>
                 <Select
                   value={filtros.obra}
-                  onValueChange={(value) => handleInputChange('obra', value)}
+                  onValueChange={(value: string) => handleInputChange('obra', value)}
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Todas las obras" />
@@ -220,7 +220,7 @@ export const GenerarInformeScreen: React.FC<GenerarInformeScreenProps> = ({
                 <Label className="text-xs">Tipo de Maquinaria (Opcional)</Label>
                 <Select
                   value={filtros.tipoMaquinaria}
-                  onValueChange={(value) => handleInputChange('tipoMaquinaria', value)}
+                  onValueChange={(value: string) => handleInputChange('tipoMaquinaria', value)}
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Todos los tipos" />

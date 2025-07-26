@@ -5,11 +5,10 @@ import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
-import { Textarea } from '../ui/textarea';
 import { Toast } from '../common/Toast';
 import { BottomNavbar } from '../common/BottomNavbar';
 import { Maquinaria, User } from '../../types';
-import { validarCampoRequerido, validarSoloNumeros } from '../../utils/validations';
+import { validarCampoRequerido } from '../../utils/validations';
 
 interface RegistrarMaquinariaScreenProps {
   registrarMaquinaria: (data: Omit<Maquinaria, 'id' | 'fechaRegistro'>) => Promise<{ success: boolean; message: string }>;
@@ -28,14 +27,6 @@ const TIPOS_MAQUINARIA = [
   'Volquete',
   'Mixer',
   'Otros'
-];
-
-const ESTADOS_MAQUINARIA = [
-  'Nuevo',
-  'Usado - Excelente',
-  'Usado - Bueno',
-  'Usado - Regular',
-  'Requiere Mantenimiento'
 ];
 
 export const RegistrarMaquinariaScreen: React.FC<RegistrarMaquinariaScreenProps> = ({
@@ -227,7 +218,7 @@ export const RegistrarMaquinariaScreen: React.FC<RegistrarMaquinariaScreenProps>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="tipo" className="text-miranda-gray-dark">Tipo *</Label>
-                    <Select value={formData.tipo} onValueChange={(value) => handleInputChange('tipo', value)}>
+                    <Select value={formData.tipo} onValueChange={(value: string) => handleInputChange('tipo', value)}>
                       <SelectTrigger className={`border-miranda-gray-light focus:border-miranda-orange-dark focus:ring-miranda-orange-dark ${errors.tipo ? 'border-destructive' : ''}`}>
                         <SelectValue placeholder="Seleccione el tipo" />
                       </SelectTrigger>

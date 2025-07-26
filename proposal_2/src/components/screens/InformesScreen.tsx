@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, FileText, Download, Search } from 'lucide-react';
+import { BarChart3, Download, Search } from 'lucide-react';
 import { Header } from '../common/Header';
 import { Card, CardContent } from '../ui/card';
 import { User } from '../../types';

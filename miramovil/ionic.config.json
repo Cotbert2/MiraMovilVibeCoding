@@ -1,0 +1,7 @@
+{
+  "name": "miramovil",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

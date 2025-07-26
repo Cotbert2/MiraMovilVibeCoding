@@ -126,9 +126,10 @@ export const ConsultarRegistrosScreen: React.FC<ConsultarRegistrosScreenProps> =
                   type="text"
                   value={filtros.maquinaria}
                   onChange={(e) => setFiltros(prev => ({ ...prev, maquinaria: e.target.value }))}
-                  placeholder="Buscar por nombre, marca o modelo..."
+                  placeholder="Buscar por nombre, marca o obra"
                 />
               </div>
+
               
               <div className="flex gap-2">
                 <Button

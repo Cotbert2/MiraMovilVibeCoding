@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Eye, EyeOff, Building2, Lock, User } from 'lucide-react';
+import { Eye, EyeOff, Lock, User } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { Toast } from '../common/Toast';
+import { Logo } from '../common/Logo';
 import { LoginData, AuthState } from '../../types';
 
 interface LoginScreenProps {
@@ -98,8 +99,8 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({
         <div className="w-full max-w-sm mx-auto space-y-8">
           {/* Logo and branding */}
           <div className="text-center space-y-4">
-            <div className="mx-auto w-20 h-20 bg-gradient-to-br from-miranda-orange-dark to-miranda-orange-light rounded-2xl flex items-center justify-center shadow-xl">
-              <Building2 className="h-10 w-10 text-white" />
+            <div className="mx-auto flex justify-center">
+              <Logo size="xl" />
             </div>
             <div className="space-y-2">
               <h1 className="text-2xl font-bold text-miranda-gray-dark">MIRA MÓVIL</h1>

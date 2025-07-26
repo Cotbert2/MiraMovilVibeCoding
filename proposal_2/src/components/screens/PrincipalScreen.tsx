@@ -27,16 +27,16 @@ interface ModuloOption {
 }
 
 const MODULOS: ModuloOption[] = [
-  {
-    id: 'usuarios',
-    title: 'Gestión de Usuarios',
-    description: 'Crear, editar y eliminar usuarios',
-    icon: <Users className="h-6 w-6" />,
-    pantalla: 'gestionUsuarios',
-    roles: ['Jefe de Compras'],
-    color: 'bg-miranda-orange-dark',
-    badge: 'Admin'
-  },
+  // {
+  //   id: 'usuarios',
+  //   title: 'Gestión de Usuarios',
+  //   description: 'Crear, editar y eliminar usuarios',
+  //   icon: <Users className="h-6 w-6" />,
+  //   pantalla: 'gestionUsuarios',
+  //   roles: ['Jefe de Compras'],
+  //   color: 'bg-miranda-orange-dark',
+  //   badge: 'Admin'
+  // },
     {
     id: 'informes',
     title: 'Generar Informes',
@@ -47,15 +47,15 @@ const MODULOS: ModuloOption[] = [
     color: 'bg-miranda-gray-dark',
     badge: 'Admin'
   },
-  {
-    id: 'maquinaria',
-    title: 'Registrar Maquinaria',
-    description: 'Agregar nueva maquinaria',
-    icon: <Package className="h-6 w-6" />,
-    pantalla: 'registrarMaquinaria',
-    roles: ['Jefe de Compras', 'Bodeguero'],
-    color: 'bg-miranda-orange-light'
-  },
+  // {
+  //   id: 'maquinaria',
+  //   title: 'Registrar Maquinaria',
+  //   description: 'Agregar nueva maquinaria',
+  //   icon: <Package className="h-6 w-6" />,
+  //   pantalla: 'registrarMaquinaria',
+  //   roles: ['Jefe de Compras', 'Bodeguero'],
+  //   color: 'bg-miranda-orange-light'
+  // },
   {
     id: 'movimientos',
     title: 'Registrar Movimiento',
@@ -66,15 +66,15 @@ const MODULOS: ModuloOption[] = [
     color: 'bg-miranda-orange-dark'
   },
   //TODO: propuesta 2
-  // {
-  //   id: 'consultas',
-  //   title: 'Consultar Registros',
-  //   description: 'Ver historial de movimientos',
-  //   icon: <FileText className="h-6 w-6" />,
-  //   pantalla: 'consultarRegistros',
-  //   roles: ['Jefe de Compras'],
-  //   color: 'bg-miranda-orange-light'
-  // }
+  {
+    id: 'consultas',
+    title: 'Consultar Registros',
+    description: 'Ver historial de movimientos',
+    icon: <FileText className="h-6 w-6" />,
+    pantalla: 'consultarRegistros',
+    roles: ['Jefe de Compras'],
+    color: 'bg-miranda-orange-light'
+  }
 ];
 
 const STATS_MOCK = [

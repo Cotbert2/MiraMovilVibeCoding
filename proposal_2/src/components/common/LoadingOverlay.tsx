@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2 } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const LoadingOverlay: React.FC = () => {
   return (
@@ -7,11 +7,8 @@ export const LoadingOverlay: React.FC = () => {
       <div className="flex flex-col items-center gap-4">
         {/* Logo animado */}
         <div className="relative">
-          <div className="w-16 h-16 bg-gradient-to-br from-miranda-orange-dark to-miranda-orange-light rounded-2xl flex items-center justify-center shadow-lg animate-pulse">
-            <div className="flex items-center justify-center">
-              <Building2 className="text-white text-xl" />
-              <span className="text-white text-lg font-bold ml-1">M</span>
-            </div>
+          <div className="animate-pulse">
+            <Logo size="lg" />
           </div>
           
           {/* Spinner alrededor del logo */}
